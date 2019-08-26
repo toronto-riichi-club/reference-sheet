@@ -1,0 +1,59 @@
+\documentclass{article}
+
+\usepackage{xeCJK}
+\usepackage{libertine}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{arydshln}
+\usepackage{multirow}
+\usepackage{diagbox}
+
+\newcommand\scorepair[2]{\hfill{}#1 $/$\hfill{}#2}
+\renewcommand{\arraystretch}{1.1}
+
+\begin{document}
+% Score table
+\begin{tabular}{|>{\bfseries}r:r||c|c|c|c|}
+  \hline
+   \multicolumn{2}{|c||}{\multirow{2}{*}{\diagbox{fu}{han}}} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4}\\
+   \cdashline{3-6}
+    & & \scorepair{non}{dealer} & \scorepair{non}{dealer} & \scorepair{non}{dealer} & \scorepair{non}{dealer}\\
+   \hline\hline
+   \multirow{2}{*}{20}        & tsumo & $-$                    & \scorepair{400}{700}   & \scorepair{700}{1300}   & \scorepair{1300}{2600}\\
+                              & ron   & $-$                    & $-$                    & $-$                     & $-$\\
+   \hline
+   \multirow{2}{*}{25}        & tsumo & $-$                    & $-$                    & \scorepair{ 800}{1600}  & \scorepair{1600}{3200}\\
+                              & ron   & $-$                    & \scorepair{1600}{2400} & \scorepair{3200}{4800}  & \scorepair{6400}{9600}\\
+   \hline
+   \multirow{2}{*}{30}        & tsumo & \scorepair{300}{500}   & \scorepair{500}{1000}  & \scorepair{1000}{2000}  & \scorepair{2000}{ 3900}\\
+                              & ron   & \scorepair{1000}{1300} & \scorepair{2000}{2900} & \scorepair{3900}{5800}  & \scorepair{7700}{11600}\\
+   \hline
+   \multirow{2}{*}{40}        & tsumo & \scorepair{400}{700}   & \scorepair{ 700}{1300} & \scorepair{1300}{2600}  & \multirow{10}{*}{\begin{tabular}{@{}c@{}}mangan\\(see below)\end{tabular}}\\
+                              & ron   & \scorepair{1300}{2000} & \scorepair{2600}{3900} & \scorepair{5200}{7700}  & \\
+   \cline{1-5}
+   \multirow{2}{*}{50}        & tsumo & \scorepair{400}{800}   & \scorepair{ 800}{1600} & \scorepair{1600}{3200}  & \\
+                              & ron   & \scorepair{1600}{2400} & \scorepair{3200}{4800} & \scorepair{6400}{9600}  & \\
+   \cline{1-5}
+   \multirow{2}{*}{60}        & tsumo & \scorepair{ 500}{1000} & \scorepair{1000}{2000} & \scorepair{2000}{ 3900} & \\
+                              & ron   & \scorepair{2000}{2900} & \scorepair{3900}{5800} & \scorepair{7700}{11600} & \\
+   \cline{1-5}
+   \multirow{2}{*}{70}        & tsumo & \scorepair{600}{1200}  & \scorepair{1200}{2300} & \multirow{2}{*}{mangan} & \\
+                              & ron   & \scorepair{2300}{3400} & \scorepair{4500}{6800} &                         & \\
+   \hline
+\end{tabular}
+
+\textbf{80+ fu:} add scores for 50 fu with remainder. Example: 80 fu = 50 fu + 30 fu.
+
+% Score table (limit)
+\begin{tabular}{|c|c|c|c|c|}
+  \hline
+  \textbf{5} & \textbf{6-7} & \textbf{8-10} & \textbf{11-12} & \textbf{13+}\\
+  mangan & haneman & baiman & sanbaiman & yakuman\\
+  \hdashline
+  \scorepair{non}{dealer} & \scorepair{non}{dealer} & \scorepair{non}{dealer} & \scorepair{non}{dealer} & \scorepair{non}{dealer}\\
+  \hline\hline
+  \scorepair{2000}{ 4000} & \scorepair{3000}{6000} & \scorepair{4000}{8000} & \scorepair{6000}{12000} & \scorepair{8000}{16000}\\
+  \scorepair{8000}{12000} & \scorepair{12000}{18000} & \scorepair{16000}{24000} & \scorepair{24000}{ 36000} & \scorepair{32000}{ 48000}\\
+  \hline
+\end{tabular}
+\end{document}
