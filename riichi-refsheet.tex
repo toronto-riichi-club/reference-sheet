@@ -9,10 +9,18 @@
 \usepackage{arydshln}
 \usepackage{multirow}
 \usepackage{diagbox}
+\usepackage{multicol}
 
 \setCJKmainfont{HanaMinA}
 
 \newcommand\scorepair[2]{\hfill{}#1 $/$\hfill{}#2}
+\newcommand\yaku[6]{\textsc{\large{}#1} / #2\hfill#6\newline{}#3&#4&#5}
+
+\newcolumntype{Y}{>{\large\centering\arraybackslash}m{1.5ex}}
+\newenvironment{yakutable}%
+  {\tabularx{\columnwidth}{|X|Y:Y|}}%
+  {\endtabularx}
+
 \renewcommand{\arraystretch}{1.1}
 
 \begin{document}
@@ -83,4 +91,98 @@ Round up to next 10, except seven pairs.
   * Double Wind & $+4$ & \multicolumn{2}{l|}{** Including Rinshan}\\
   \hline
 \end{tabular}
+
+\pagebreak
+
+\begin{centering}
+%\section*{\textsc{Yaku}}
+
+\framebox[\textwidth]{\parbox{\textwidth}{%
+\hfill\textbf{\uppercase{Legend}}%
+\hfill%
+\hfill\begin{tabular}{|l|c:c|}\hline\textsc{Yaku}$\qquad$&Closed&Open\\\hline\end{tabular}%
+\hfill\textbf{\textsc{Beginner-Friendly}}%
+\hfill\textbf{M}\quad Mangan%
+\hfill\textbf{Y}\quad Yakuman%
+\hfill\hfill%
+}}
+
+\begin{multicols}{2}
+\subsection*{Situational}
+\begin{yakutable}
+  \hline \yaku{\textbf{Riichi}}{立直}{Declare riichi}{1}{$-$}{}\\
+  \hline \yaku{Ippatsu}{一発}{Win within 1 turn of riichi}{1}{$-$}{Uninterrupted}\\
+  \hline \yaku{Double Riichi}{ダブル立直}{First-turn riichi}{1}{$-$}{}\\
+  \hline \yaku{\textbf{Menzen Tsumo}}{門前清自摸和}{Closed-hand tsumo}{1}{$-$}{}\\
+  \hline \yaku{Haitei Raoyue}{海底撈月}{Last tile tsumo}{1}{1}{}\\
+  \hline \yaku{Houtei Raoyui}{河底撈魚}{Last tile ron}{1}{1}{}\\
+  \hline \yaku{Rinshan Kaihou}{嶺上開花}{Tsumo after a kan}{1}{1}{}\\
+  \hline \yaku{Chankan}{搶槓}{Ron off tile added to a kan}{1}{1}{}\\
+  \hline \yaku{Renhou}{人和}{Ron before first turn}{M}{$-$}{Uninterrupted}\\
+  \hline \yaku{Tenhou}{天和}{Dealer first turn tsumo}{Y}{$-$}{}\\
+  \hline \yaku{Chiihou}{地和}{Non-dealer first turn tsumo}{Y}{$-$}{Uninterrupted}\\
+  \hline
+\end{yakutable}
+
+\subsection*{Sequences}
+\begin{yakutable}
+  \hline \yaku{\textbf{Pinfu}}{平和}{Only sequences, 2-sided wait, pair is not yakuhai tiles}{1}{$-$}{}\\
+  \hline \yaku{Iipeikou}{一盃口}{Same sequence twice}{1}{$-$}{}\\
+  \hline \yaku{\textbf{Sanshoku}}{三色同順}{Same sequence in each suit}{2}{1}{}\\
+  \hline \yaku{Ittsu}{一気通貫}{Sequences 123, 456, 789 in one suit}{2}{1}{}\\
+  \hline \yaku{Ryanpeikou}{二盃口}{Two sequences twice each}{3}{$-$}{}\\
+  \hline
+\end{yakutable}
+
+\subsection*{Suits}
+\begin{yakutable}
+  \hline \yaku{\textbf{Honitsu}}{混一色}{Single suit with honours}{3}{2}{}\\
+  \hline \yaku{Chinitsu}{清一色}{Single suit, no honours}{6}{5}{}\\
+  \hline \yaku{Chuuren Poutou}{九連宝燈}{1112345678999X, single suit}{Y}{$-$}{}\\
+  \hline \yaku{Ryuuiisou}{緑一色}{Only hatsu or 2, 3, 4, 6, 8 sou}{Y}{Y}{}\\
+  \hline
+\end{yakutable}
+
+\subsection*{Special}
+\begin{yakutable}
+  \hline \yaku{\textbf{Chiitoi}}{七対子}{Seven pairs}{2}{$-$}{}\\
+  \hline \yaku{Nagashi Mangan}{流し満貫}{Terminal/honour discards only}{M}{$-$}{Discards intact}\\
+  \hline \yaku{Kokushi Musou}{国士無双}{Each terminal and honour}{Y}{$-$}{}\\
+  \hline
+\end{yakutable}
+
+\subsection*{Sets}
+\begin{yakutable}
+  \hline \yaku{\textbf{Toitoi}}{対々和}{Only sets}{2}{2}{}\\
+  \hline \yaku{Sanankou}{三暗刻}{Three concealed sets}{2}{2}{}\\
+  \hline \yaku{Sanshoku Doukou}{三色同刻}{Same set in each suit}{2}{2}{}\\
+  \hline \yaku{Sankantsu}{三槓子}{Three kans}{2}{2}{}\\
+  \hline \yaku{Suuankou}{四暗刻}{Four concealed sets}{Y}{$-$}{}\\
+  \hline \yaku{Suukantsu}{四槓子}{Four kans}{Y}{Y}{}\\
+  \hline
+\end{yakutable}
+
+\subsection*{Terminals}
+\begin{yakutable}
+  \hline \yaku{\textbf{Tanyao}}{断幺九}{No terminals or honours}{1}{1}{}\\
+  \hline \yaku{Chanta}{混全帯么九}{A terminal/honour in each group/pair}{2}{1}{}\\
+  \hline \yaku{Junchan}{純全帯么九}{A terminal in each group/pair}{3}{2}{}\\
+  \hline \yaku{Chinroutou}{清老頭}{Only terminals}{Y}{Y}{}\\
+  \hline
+\end{yakutable}
+
+\subsection*{Honours}
+\begin{yakutable}
+  \hline \yaku{\textbf{Yakuhai}}{役牌}{Set of dragons or round or seat winds}{1}{1}{}\\
+  \hline \yaku{Honroutou}{混老頭}{Only terminals and honours}{2}{2}{}\\
+  \hline \yaku{Shousangen}{小三元}{Two sets and a pair of dragons}{2}{2}{}\\
+  \hline \yaku{Daisangen}{大三元}{Three sets of dragons}{Y}{Y}{}\\
+  \hline \yaku{Shousuushi}{小四喜}{Three sets and a pair of winds}{Y}{Y}{}\\
+  \hline \yaku{Daisuushi}{大四喜}{Four sets of winds}{Y}{Y}{}\\
+  \hline \yaku{Tsuuiisou}{字一色}{Only honours}{Y}{Y}{}\\
+  \hline
+\end{yakutable}
+\end{multicols}
+\end{centering}
+
 \end{document}
