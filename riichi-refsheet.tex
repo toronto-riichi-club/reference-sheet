@@ -24,6 +24,7 @@
 \newcommand\scorepair[2]{\hfill{}#1 $/$\hfill{}#2}
 \newcommand\yaku[6]{\textsc{\large{}#1} / #2\hfill#6\newline{}#3&#4&#5}
 
+\newcolumntype{S}{@{}>{\centering\arraybackslash}X@{\,\,}}
 \newcolumntype{Y}{>{\large\centering\arraybackslash}m{1.5ex}}
 \newenvironment{yakutable}%
   {\tabularx{\columnwidth}{|X|Y:Y|}}%
@@ -99,9 +100,9 @@ $\hookrightarrow$
 \medskip
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{minipage}[t]{0.55\linewidth}
+\begin{minipage}[t]{0.58\linewidth}\vspace{0pt}
 % Score table
-\begin{tabular}{|>{\bfseries}r:r||c|c|c|c|}
+\begin{tabularx}{\linewidth}{|>{\bfseries}r:r||S|S|S|S|}
   \hline
    \multicolumn{2}{|c||}{\multirow{2}{*}{\diagbox{\large{}fu}{\large{}han}}} & \textbf{\large{}1} & \textbf{\large{}2} & \textbf{\large{}3} & \textbf{\large{}4}\\
    \cdashline{3-6}
@@ -128,12 +129,12 @@ $\hookrightarrow$
    \multirow{2}{*}{\large{}70}        & tsumo & \scorepair{600}{1200}  & \scorepair{1200}{2300} & \multirow{2}{*}{mangan} & \\
                               & ron   & \scorepair{2300}{3400} & \scorepair{4500}{6800} &                         & \\
    \hline
-\end{tabular}
+\end{tabularx}
 
 \textbf{80+ fu:} add scores for 50 fu with remainder. Example: 80 fu = 50 fu + 30 fu.
 
 % Score table (limit)
-\begin{tabular}{|c|c|c|c|c|}
+\begin{tabularx}{\linewidth}{|S|S|S|S|S|}
   \hline
   \textbf{\large{}5} & \textbf{\large{}6-7} & \textbf{\large{}8-10} & \textbf{\large{}11-12} & \textbf{\large{}13+}\\
   mangan & haneman & baiman & sanbaiman & yakuman\\
@@ -143,36 +144,12 @@ $\hookrightarrow$
   \scorepair{2000}{ 4000} & \scorepair{3000}{6000} & \scorepair{4000}{8000} & \scorepair{6000}{12000} & \scorepair{8000}{16000}\\
   \scorepair{8000}{12000} & \scorepair{12000}{18000} & \scorepair{16000}{24000} & \scorepair{24000}{ 36000} & \scorepair{32000}{ 48000}\\
   \hline
-\end{tabular}
-
-% Fu table
-Round up to next 10, except seven pairs.
-
-\begin{tabular}{|l|r|l|r|}
-  \hline
-  Hand Base & $20$ & Set Base & 2 \\
-  \hline
-  Closed Ron & $+10$ & Concealed & $\times 2$\\
-  \hline
-  Yakuhai pair* & $+2$ & 1/9/Honour & $\times 2$\\
-  \hline
-  Pair Wait & $+2$ & Quad & $\times 4$\\
-  \hline
-  Edge Wait & $+2$ & Seven Pairs & $=25$\\
-  \hline
-  Middle Wait & $+2$ & Pinfu Tsumo & $=20$\\
-  \hline
-  Tsumo** & $+2$ & Open Hand & $\ge 30$\\
-  \hline
-  * Double Wind & $+4$ & \multicolumn{2}{l|}{** Including Rinshan}\\
-  \hline
-\end{tabular}
-\end{minipage}\hspace{1em}
-\begin{minipage}[t]{0.4\linewidth}
+\end{tabularx}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.4\linewidth}\vspace{0pt}
 % Calls table
-
-{\setlength{\extrarowheight}{2.25ex}
-  \begin{tabular}{|c|c|c|}
+{\setlength{\extrarowheight}{2.25ex}%
+  \begin{tabularx}{\linewidth}{|X|X|X|}
     \hline
     \textbf{Group} & \textbf{Call} & \textbf{From}\\
     \hline
@@ -192,11 +169,33 @@ Round up to next 10, except seven pairs.
     \hline
     Win                                                    & ``tsumo'' & Other\\
     \hline
-  \end{tabular}
+  \end{tabularx}
 }
 
 Lower calls take precedence when simultaneous.
 
+% Fu table
+Round up to next 10, except seven pairs.
+
+\begin{tabularx}{\linewidth}{|X|r|X|r|}
+  \hline
+  Hand Base & $20$ & Set Base & $2$ \\
+  \hline
+  Closed Ron & $+10$ & Concealed & $\times 2$\\
+  \hline
+  Yakuhai pair* & $+2$ & 1/9/Honour & $\times 2$\\
+  \hline
+  Pair Wait & $+2$ & Quad & $\times 4$\\
+  \hline
+  Edge Wait & $+2$ & Seven Pairs & $=25$\\
+  \hline
+  Middle Wait & $+2$ & Pinfu Tsumo & $=20$\\
+  \hline
+  Tsumo** & $+2$ & Open Hand & $\ge 30$\\
+  \hline
+  * Double Wind & $+4$ & \multicolumn{2}{l|}{** Rinshan included}\\
+  \hline
+\end{tabularx}
 \end{minipage}
 
 \pagebreak
