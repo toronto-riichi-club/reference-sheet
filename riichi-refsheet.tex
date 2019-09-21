@@ -17,7 +17,7 @@
 
 \setCJKmainfont{HanaMinA}
 
-\newcommand\tile[2][]{\begin{overpic}[width=1em,#1]{tiles/front.pdf}\centering\includegraphics[width=1em,#1]{tiles/#2.pdf}\end{overpic}}
+\newcommand\tile[2][]{\raisebox{-0.25ex}{\begin{overpic}[width=1em,#1]{tiles/front.pdf}\centering\includegraphics[width=1em,#1]{tiles/#2.pdf}\end{overpic}}}
 \newcommand\Hugetile[2][]{{\Huge\tile[#1]{#2}}}
 \newcommand\describetile[3]{\pbox{1.5em}{\Hugetile{#1}\normalsize\\\textbf{#2}\\\textit{#3}}}
 
@@ -165,25 +165,30 @@ Round up to next 10, except seven pairs.
 \end{tabular}
 
 % Calls table
-\begin{tabular}{|c|c|c|}
-  \hline
-  \textbf{Group} & \textbf{Call} & \textbf{From}\\
-  \hline
-                 & ``Chii''      & Left\\
-  \hline
-                 & ``Pon''       & Other\\
-  \hline
-                 & ``Kan''       & Other\\
-  \hline
-                 & ``Kan''       & Self\\
-  \hline
-                 & ``Kan''       & Self\\
-  \hline
-  Win            & ``Ron''       & Other\\
-  \hline
-  Win            & ``Tsumo''     & Other\\
-  \hline
-\end{tabular}
+
+{\setlength{\extrarowheight}{2.25ex}
+  \begin{tabular}{|c|c|c|}
+    \hline
+    \textbf{Group} & \textbf{Call} & \textbf{From}\\
+    \hline
+    \tile[angle=90]{man1}\tile{man2}\tile{man3}            & ``chii''  & Left\\
+    \hline
+    \tile{hatsu}\tile{hatsu}\tile[angle=90]{hatsu}         & ``pon''   & Other\\
+    \hline
+    \tile{pin8}\tile[angle=90]{pin8}\tile{pin8}\tile{pin8} & ``kan''   & Other\\
+    \hline
+    \tile{back}\tile{sou1}\tile{sou1}\tile{back}           & ``kan''   & Self\\
+    \hline
+    \tile{shaa}%
+    \pbox[b]{\textwidth}{\tile[angle=90]{shaa}\\*[-0.5ex]\tile[angle=90]{shaa}}%
+    \tile{shaa}                                            & ``kan''   & Self\\
+    \hline
+    Win                                                    & ``ron''   & Other\\
+    \hline
+    Win                                                    & ``tsumo'' & Other\\
+    \hline
+  \end{tabular}
+}
 
 Lower calls take precedence when simultaneous.
 
