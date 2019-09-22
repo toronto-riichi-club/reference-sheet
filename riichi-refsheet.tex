@@ -127,11 +127,13 @@ $\hookrightarrow$
                                       & ron   & \scorepair{2000}{2900} & \scorepair{3900}{5800} & \scorepair{7700}{11600} & \\
    \cline{1-5}
    \multirow{2}{*}{\large{}70}        & tsumo & \scorepair{600}{1200}  & \scorepair{1200}{2300} & \multirow{2}{*}{mangan} & \\
-                              & ron   & \scorepair{2300}{3400} & \scorepair{4500}{6800} &                         & \\
+                                      & ron   & \scorepair{2300}{3400} & \scorepair{4500}{6800} &                         & \\
+   \hline\hline
+   \multicolumn{6}{|l|}{\textbf{{\large 80+:}} Add 50 fu scores with remainder. Example: 80 fu = 50 fu + 30 fu.}\\
    \hline
 \end{tabularx}
 
-\textbf{80+ fu:} add scores for 50 fu with remainder. Example: 80 fu = 50 fu + 30 fu.
+\medskip
 
 % Score table (limit)
 \begin{tabularx}{\linewidth}{|S|S|S|S|S|}
@@ -143,6 +145,8 @@ $\hookrightarrow$
   \hline\hline
   \scorepair{2000}{ 4000} & \scorepair{3000}{6000} & \scorepair{4000}{8000} & \scorepair{6000}{12000} & \scorepair{8000}{16000}\\
   \scorepair{8000}{12000} & \scorepair{12000}{18000} & \scorepair{16000}{24000} & \scorepair{24000}{ 36000} & \scorepair{32000}{ 48000}\\
+  \hline\hline
+  \multicolumn{5}{|l|}{Fu count does not contribute to scores worth mangan or higher.}\\
   \hline
 \end{tabularx}
 \end{minipage}\hfill
@@ -168,17 +172,19 @@ $\hookrightarrow$
     Win                                                    & ``ron''   & Other\\
     \hline
     Win                                                    & ``tsumo'' & Other\\
+    \hline\hline
+    \multicolumn{3}{|l|}{Lower calls take precedence when simultaneous.}\\
     \hline
   \end{tabularx}
 }
 
-Lower calls take precedence when simultaneous.
+\medskip
 
 % Fu table
-Round up to next 10, except seven pairs.
-
 \begin{tabularx}{\linewidth}{|X|r|X|r|}
   \hline
+  \multicolumn{4}{|l|}{\textbf{\large Fu}\hfill Round up to next 10, except seven pairs.}\\
+  \hline\hline
   Hand Base & $20$ & Set Base & $2$ \\
   \hline
   Closed Ron & $+10$ & Concealed & $\times 2$\\
