@@ -1,0 +1,52 @@
+\usepackage[margin=1cm,includefoot,footskip=1.5em]{geometry}
+\usepackage{fancyhdr}
+\usepackage[
+  hidelinks,
+  pdftitle={Riichi Reference Sheet},
+  pdfauthor={Toronto Riichi Club},
+]{hyperref}
+\usepackage{xeCJK}
+\usepackage{libertine}
+\usepackage{microtype}
+\usepackage[type={CC},modifier={by-sa},version={4.0}]{doclicense}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{arydshln}
+\usepackage{multirow}
+\usepackage{diagbox}
+\usepackage{pbox}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{overpic}
+
+\setCJKmainfont{HanaMinA}
+
+\newcommand\tenbou[1]{\includegraphics[height=1em]{tenbou/tenbou-#1.pdf}}
+
+\newcommand\tile[2][]{\raisebox{-0.5ex}{\begin{overpic}[height=1em,#1]{tiles/front.pdf}\centering\includegraphics[height=1em,#1]{tiles/#2.pdf}\end{overpic}}}
+\newcommand\describetile[3]{\pbox{1.5em}{\tile[height=1.5em]{#1}\normalsize\\\textbf{#2}\\\textit{#3}}}
+
+\newcommand\scorepair[2]{\hfill{}#1\ \ $/$\hfill{}#2}
+\newcommand\yaku[6]{\textsc{\large{}#1} / #2\hfill#6\newline{}#3&#4&#5}
+\newenvironment{callprocedure}%
+  {\begin{enumerate}[leftmargin=2pt,itemindent=1pt,itemsep=0pt,labelsep=1ex,topsep=0pt]}%
+  {\end{enumerate}}
+
+\newcolumntype{S}{@{}>{\centering\arraybackslash}X@{\,\,}}
+\newcolumntype{Y}{>{\large\centering\arraybackslash}m{1.5ex}}
+\newenvironment{yakutable}%
+  {\tabularx{\columnwidth}{|X|Y:Y|}}%
+  {\endtabularx}
+
+\renewcommand{\arraystretch}{1.1}
+\setlength{\parindent}{0pt}
+\setlength\extrarowheight{0.25ex}
+
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{1pt}
+\cfoot{%
+  © 2019 Toronto Riichi Club. \doclicenseIcon \doclicenseText \\
+  Based on the reference sheet by Alexis ``alercah'' Hunt (CC BY-SA 4.0).
+  Tile images by FluffyStuff (CC BY 4.0).
+}

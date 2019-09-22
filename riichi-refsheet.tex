@@ -1,280 +1,47 @@
 \documentclass{article}
 
-\usepackage[margin=1cm,includefoot,footskip=1.5em]{geometry}
-\usepackage{fancyhdr}
-\usepackage[
-  hidelinks,
-  pdftitle={Riichi Reference Sheet},
-  pdfauthor={Toronto Riichi Club},
-]{hyperref}
-\usepackage{xeCJK}
-\usepackage{libertine}
-\usepackage{microtype}
-\usepackage[type={CC},modifier={by-sa},version={4.0}]{doclicense}
-\usepackage{tabularx}
-\usepackage{booktabs}
-\usepackage{arydshln}
-\usepackage{multirow}
-\usepackage{diagbox}
-\usepackage{pbox}
-\usepackage{multicol}
-\usepackage{graphicx}
-\usepackage{overpic}
-
-\setCJKmainfont{HanaMinA}
-
-\newcommand\tenbou[1]{\includegraphics[height=1em]{tenbou/tenbou-#1.pdf}}
-
-\newcommand\tile[2][]{\raisebox{-0.5ex}{\begin{overpic}[height=1em,#1]{tiles/front.pdf}\centering\includegraphics[height=1em,#1]{tiles/#2.pdf}\end{overpic}}}
-\newcommand\describetile[3]{\pbox{1.5em}{\tile[height=1.5em]{#1}\normalsize\\\textbf{#2}\\\textit{#3}}}
-
-\newcommand\scorepair[2]{\hfill{}#1\ \ $/$\hfill{}#2}
-\newcommand\yaku[6]{\textsc{\large{}#1} / #2\hfill#6\newline{}#3&#4&#5}
-\newenvironment{callprocedure}%
-  {\begin{enumerate}[leftmargin=2pt,itemindent=1pt,itemsep=0pt,labelsep=1ex,topsep=0pt]}%
-  {\end{enumerate}}
-
-\newcolumntype{S}{@{}>{\centering\arraybackslash}X@{\,\,}}
-\newcolumntype{Y}{>{\large\centering\arraybackslash}m{1.5ex}}
-\newenvironment{yakutable}%
-  {\tabularx{\columnwidth}{|X|Y:Y|}}%
-  {\endtabularx}
-
-\renewcommand{\arraystretch}{1.1}
-\setlength{\parindent}{0pt}
-\setlength\extrarowheight{0.25ex}
-
-\pagestyle{fancy}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{1pt}
-\cfoot{%
-  © 2019 Toronto Riichi Club. \doclicenseIcon \doclicenseText \\
-  Based on the reference sheet by Alexis ``alercah'' Hunt (CC BY-SA 4.0).
-  Tile images by FluffyStuff (CC BY 4.0).
-}
+\input{./includes/preamble.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 \begin{center}\huge Riichi Reference Sheet\end{center}
 
-\begin{center}\huge
-% pinzu
-$\hookrightarrow$
-\describetile{pin1}{1 pin}{iipin}$\Rightarrow$
-\describetile{pin2}{2 pin}{ryanpin}$\Rightarrow$
-\describetile{pin3}{3 pin}{sanpin}$\Rightarrow$
-\describetile{pin4}{4 pin}{suupin}$\Rightarrow$
-\describetile{pin5}{5 pin}{uupin}$\Rightarrow$
-\describetile{pin6}{6 pin}{roupin}$\Rightarrow$
-\describetile{pin7}{7 pin}{chiipin}$\Rightarrow$
-\describetile{pin8}{8 pin}{paapin}$\Rightarrow$
-\describetile{pin9}{9 pin}{kyuupin}$\rightarrow$
-\vspace{0.25ex}
-
-% souzu
-$\hookrightarrow$
-\describetile{sou1}{1 sou}{iisou}$\Rightarrow$
-\describetile{sou2}{2 sou}{ryansou}$\Rightarrow$
-\describetile{sou3}{3 sou}{sansou}$\Rightarrow$
-\describetile{sou4}{4 sou}{suusou}$\Rightarrow$
-\describetile{sou5}{5 sou}{uusou}$\Rightarrow$
-\describetile{sou6}{6 sou}{rousou}$\Rightarrow$
-\describetile{sou7}{7 sou}{chiisou}$\Rightarrow$
-\describetile{sou8}{8 sou}{paasou}$\Rightarrow$
-\describetile{sou9}{9 sou}{kyuusou}$\rightarrow$
-\vspace{0.25ex}
-
-% manzu
-$\hookrightarrow$
-\describetile{man1}{1 man}{iiwan}$\Rightarrow$
-\describetile{man2}{2 man}{ryanwan}$\Rightarrow$
-\describetile{man3}{3 man}{sanwan}$\Rightarrow$
-\describetile{man4}{4 man}{suuwan}$\Rightarrow$
-\describetile{man5}{5 man}{uuwan}$\Rightarrow$
-\describetile{man6}{6 man}{rouwan}$\Rightarrow$
-\describetile{man7}{7 man}{chiiwan}$\Rightarrow$
-\describetile{man8}{8 man}{paawan}$\Rightarrow$
-\describetile{man9}{9 man}{kyuuwan}$\rightarrow$
-\vspace{0.25ex}
-
-\pbox{\textwidth}{$\hookrightarrow$
-  % winds
-  \describetile{ton}{East}{ton}$\rightarrow$
-  \describetile{nan}{South}{nan}$\rightarrow$
-  \describetile{shaa}{West}{shaa}$\rightarrow$
-  \describetile{pei}{North}{pei}$\rightarrow$
-}
-\ %
-% legend
-\fbox{\pbox{3em}{\normalsize$\Rightarrow$ seqs. \& dora\\$\rightarrow$ dora only}}
-\ %
-\pbox{\textwidth}{$\hookrightarrow$
-  % dragons
-  \describetile{haku}{White}{haku}$\rightarrow$
-  \describetile{hatsu}{Green}{hatsu}$\rightarrow$
-  \describetile{chun}{Red}{chun}$\rightarrow$
-}
-\end{center}
+\input{./includes/tiles.tex}
 
 \medskip
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{minipage}[t]{0.58\linewidth}\vspace{0pt}
+
 % Score table
-\begin{tabularx}{\linewidth}{|>{\bfseries}r:r||S|S|S|S|}
-  \hline
-   \multicolumn{2}{|c||}{\multirow{2}{*}{\diagbox{\large{}fu}{\large{}han}}} & \textbf{\large{}1} & \textbf{\large{}2} & \textbf{\large{}3} & \textbf{\large{}4}\\
-   \cdashline{3-6}
-    & & \scorepair{ non}{dealer} & \scorepair{ non}{dealer} & \scorepair{ non}{dealer} & \scorepair{ non}{dealer}\\
-   \hline\hline
-   \multirow{2}{*}{\large{}20}        & tsumo & $-$                    & \scorepair{400}{700}   & \scorepair{700}{1300}   & \scorepair{1300}{2600}\\
-                                      & ron   & $-$                    & $-$                    & $-$                     & $-$\\
-   \hline
-   \multirow{2}{*}{\large{}25}        & tsumo & $-$                    & $-$                    & \scorepair{ 800}{1600}  & \scorepair{1600}{3200}\\
-                                      & ron   & $-$                    & \scorepair{1600}{2400} & \scorepair{3200}{4800}  & \scorepair{6400}{9600}\\
-   \hline
-   \multirow{2}{*}{\large{}30}        & tsumo & \scorepair{300}{500}   & \scorepair{500}{1000}  & \scorepair{1000}{2000}  & \scorepair{2000}{ 3900}\\
-                                      & ron   & \scorepair{1000}{1300} & \scorepair{2000}{2900} & \scorepair{3900}{5800}  & \scorepair{7700}{11600}\\
-   \hline
-   \multirow{2}{*}{\large{}40}        & tsumo & \scorepair{400}{700}   & \scorepair{ 700}{1300} & \scorepair{1300}{2600}  & \multirow{10}{*}{\begin{tabular}{@{}c@{}}mangan\\(see below)\end{tabular}}\\
-                                      & ron   & \scorepair{1300}{2000} & \scorepair{2600}{3900} & \scorepair{5200}{7700}  & \\
-   \cline{1-5}
-   \multirow{2}{*}{\large{}50}        & tsumo & \scorepair{400}{800}   & \scorepair{ 800}{1600} & \scorepair{1600}{3200}  & \\
-                                      & ron   & \scorepair{1600}{2400} & \scorepair{3200}{4800} & \scorepair{6400}{9600}  & \\
-   \cline{1-5}
-   \multirow{2}{*}{\large{}60}        & tsumo & \scorepair{ 500}{1000} & \scorepair{1000}{2000} & \scorepair{2000}{ 3900} & \\
-                                      & ron   & \scorepair{2000}{2900} & \scorepair{3900}{5800} & \scorepair{7700}{11600} & \\
-   \cline{1-5}
-   \multirow{2}{*}{\large{}70}        & tsumo & \scorepair{600}{1200}  & \scorepair{1200}{2300} & \multirow{2}{*}{mangan} & \\
-                                      & ron   & \scorepair{2300}{3400} & \scorepair{4500}{6800} &                         & \\
-   \hline\hline
-   \multicolumn{6}{|l|}{\textbf{{\large 80+:}} Add 50 fu scores with remainder. Example: 80 fu = 50 fu + 30 fu.}\\
-   \hline
-\end{tabularx}
+\input{./includes/scores.tex}
 
 \medskip
 
 % Score table (limit)
-\begin{tabularx}{\linewidth}{|S|S|S|S|S|}
-  \hline
-  \textbf{\large{}5} & \textbf{\large{}6-7} & \textbf{\large{}8-10} & \textbf{\large{}11-12} & \textbf{\large{}13+}\\
-  mangan & haneman & baiman & sanbaiman & yakuman\\
-  \hdashline
-  \scorepair{non}{dealer} & \scorepair{non}{dealer} & \scorepair{non}{dealer} & \scorepair{non}{dealer} & \scorepair{non}{dealer}\\
-  \hline\hline
-  \scorepair{2000}{ 4000} & \scorepair{3000}{6000} & \scorepair{4000}{8000} & \scorepair{6000}{12000} & \scorepair{8000}{16000}\\
-  \scorepair{8000}{12000} & \scorepair{12000}{18000} & \scorepair{16000}{24000} & \scorepair{24000}{ 36000} & \scorepair{32000}{ 48000}\\
-  \hline\hline
-  \multicolumn{5}{|l|}{Fu count does not contribute to scores worth mangan or higher.}\\
-  \hline
-\end{tabularx}
+\input{./includes/scores-limit.tex}
 
 \medskip
 
+% Call procedures
 {\footnotesize%
-  \begin{tabularx}{\linewidth}{XXXXX}
-    {\large\bfseries Pon/Chii} & {\large\bfseries Kan} & {\large\bfseries Riichi} & {\large\bfseries Ron} & {\large\bfseries Tsumo}\\
-    % Pon/chii
-    \begin{callprocedure}
-      \item Announce call
-      \item Reveal tiles
-      \item Discard
-      \item Arrange hand
-    \end{callprocedure} &
-    % Kan
-    \begin{callprocedure}
-      \item Announce call
-      \item Arrange tiles
-      \item Reveal kandora
-      \item Draw from dead wall
-      \item Discard/\linebreak[0]tsumo/\linebreak[0]kan
-    \end{callprocedure} &
-    % Riichi
-    \begin{callprocedure}
-      \item Announce riichi
-      \item Discard sideways
-      \item Place 1000-point bet in the middle
-    \end{callprocedure} &
-    % Ron
-    \begin{callprocedure}
-      \item Announce ron
-      \item Reveal hand
-      \item Do not pick up tile
-    \end{callprocedure} &
-    % Tsumo
-    \begin{callprocedure}
-    \item Keep draw separate
-    \item Announce tsumo
-    \item Reveal hand
-    \end{callprocedure}
-
-  \end{tabularx}
+  \input{./includes/call-procedures.tex}
 }
 \end{minipage}\hfill
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{minipage}[t]{0.4\linewidth}\vspace{0pt}
 % Calls table
-{\setlength{\extrarowheight}{1ex}%
-  \begin{tabularx}{\linewidth}{|>{\Large\raggedleft\arraybackslash}X|>{\centering\arraybackslash}X|X|}
-    \hline
-    \textbf{\normalsize Group} & \textbf{Call} & \textbf{From}\\
-    \hline
-    \tile[angle=90]{man1}\tile{man2}\tile{man3}            & ``chii''  & Left\\
-    \hline
-    \tile{hatsu}\tile{hatsu}\tile[angle=90]{hatsu}         & ``pon''   & Other\\
-    \hline
-    \tile{pin8}\tile[angle=90]{pin8}\tile{pin8}\tile{pin8} & ``kan''   & Other\\
-    \hline
-    \tile{back}\tile{sou1}\tile{sou1}\tile{back}           & ``kan''   & Self\\
-    \hline
-    \tile{shaa}%
-    \pbox[b]{\textwidth}{\vspace{0.25ex}\tile[angle=90]{shaa}\\*[-0.5em]\tile[angle=90]{shaa}}%
-    \tile{shaa}                                            & ``kan''   & Self\\
-    \hline
-    {\normalsize Win}                                      & ``ron''   & Other\\
-    \hline
-    {\normalsize Win}                                      & ``tsumo'' & Other\\
-    \hline\hline
-    \multicolumn{3}{|l|}{Lower calls take precedence when simultaneous.}\\
-    \hline
-  \end{tabularx}
-}
+\input{./includes/calls.tex}
 
 \medskip
 
 % Fu table
-\begin{tabularx}{\linewidth}{|X|r|X|r|}
-  \hline
-  \multicolumn{4}{|l|}{\textbf{\large Fu}\hfill Round up to next 10, except seven pairs.}\\
-  \hline\hline
-  Hand Base & $20$ & Set Base & $2$ \\
-  \hline
-  Closed Ron & $+10$ & Concealed & $\times 2$\\
-  \hline
-  Yakuhai pair* & $+2$ & 1/9/Honour & $\times 2$\\
-  \hline
-  Pair Wait & $+2$ & Quad & $\times 4$\\
-  \hline
-  Edge Wait & $+2$ & Seven Pairs & $=25$\\
-  \hline
-  Middle Wait & $+2$ & Pinfu Tsumo & $=20$\\
-  \hline
-  Tsumo** & $+2$ & Open Hand & $\ge 30$\\
-  \hline
-  * Double Wind & $+4$ & \multicolumn{2}{l|}{** Rinshan included}\\
-  \hline
-\end{tabularx}
+\input{./includes/fu.tex}
 
 \bigskip
 
-\begin{tabular}{llrl}
-  \tenbou{100}   & $\times 5$* &   100 & White\\
-  \tenbou{500}   & $\times 1$* &   500 & Green\\
-  \tenbou{1000}  & $\times 4$  &  1000 & Blue\\
-  \tenbou{5000}  & $\times 2$  &  5000 & Yellow\\
-  \tenbou{10000} & $\times 1$  & 10000 & Red\\
-  \multicolumn{4}{p{\linewidth}}{* If 500-point sticks are not available, substitute with five 100-point sticks.\newline Colours and patterns may vary.}
-\end{tabular}
-
+% Tenbou
+\input{./includes/tenbou.tex}
 \end{minipage}
 
 \pagebreak
@@ -283,91 +50,17 @@ $\hookrightarrow$
 \begin{centering}
 %\section*{\textsc{Yaku}}
 
-\framebox[\textwidth]{\parbox{\textwidth}{%
-\hfill\textbf{\uppercase{Legend}}%
-\hfill%
-\hfill\begin{tabular}{|l|c:c|}\hline\textsc{Yaku}$\qquad$&Closed&Open\\\hline\end{tabular}%
-\hfill\textbf{\textsc{Beginner-Friendly}}%
-\hfill\textbf{M}\quad Mangan%
-\hfill\textbf{Y}\quad Yakuman%
-\hfill\hfill%
-}}
+\input{./includes/yaku-legend.tex}
 
+% Yaku
 \begin{multicols}{2}
-\subsection*{Situational}
-\begin{yakutable}
-  \hline \yaku{\textbf{Riichi}}{立直}{Declare riichi}{1}{$-$}{}\\
-  \hline \yaku{Ippatsu}{一発}{Win within 1 turn of riichi}{1}{$-$}{Uninterrupted, Add to riichi}\\
-  \hline \yaku{Double Riichi}{ダブル立直}{First-turn riichi}{1}{$-$}{Add to riichi}\\
-  \hline \yaku{\textbf{Menzen Tsumo}}{門前清自摸和}{Closed-hand tsumo}{1}{$-$}{}\\
-  \hline \yaku{Haitei Raoyue}{海底撈月}{Tsumo on last draw from live wall}{1}{1}{}\\
-  \hline \yaku{Houtei Raoyui}{河底撈魚}{Ron on last discard}{1}{1}{}\\
-  \hline \yaku{Rinshan Kaihou}{嶺上開花}{Tsumo after a kan}{1}{1}{}\\
-  \hline \yaku{Chankan}{搶槓}{Ron on tile added to a kan}{1}{1}{}\\
-  \hline \yaku{Renhou}{人和}{Ron before first turn}{M}{$-$}{Uninterrupted}\\
-  \hline \yaku{Tenhou}{天和}{Dealer first turn tsumo}{Y}{$-$}{}\\
-  \hline \yaku{Chiihou}{地和}{Non-dealer first turn tsumo}{Y}{$-$}{Uninterrupted}\\
-  \hline
-\end{yakutable}
-
-\subsection*{Sequences}
-\begin{yakutable}
-  \hline \yaku{\textbf{Pinfu}}{平和}{Only sequences, 2-sided wait, pair is not yakuhai tiles}{1}{$-$}{}\\
-  \hline \yaku{Iipeikou}{一盃口}{Two identical sequences}{1}{$-$}{}\\
-  \hline \yaku{\textbf{Sanshoku}}{三色同順}{Same sequence in each suit}{2}{1}{}\\
-  \hline \yaku{Ittsu}{一気通貫}{Sequences 123, 456, 789 in one suit}{2}{1}{}\\
-  \hline \yaku{Ryanpeikou}{二盃口}{Two pairs of identical sequences}{3}{$-$}{}\\
-  \hline
-\end{yakutable}
-
-\subsection*{Suits}
-\begin{yakutable}
-  \hline \yaku{\textbf{Honitsu}}{混一色}{Single suit with honours}{3}{2}{}\\
-  \hline \yaku{Chinitsu}{清一色}{Single suit, no honours}{6}{5}{}\\
-  \hline \yaku{Chuuren Poutou}{九連宝燈}{1112345678999 plus duplicate, single suit}{Y}{$-$}{}\\
-  \hline \yaku{Ryuuiisou}{緑一色}{Only green tiles (2/3/4/6/8 sou or hatsu)}{Y}{Y}{}\\
-  \hline
-\end{yakutable}
-
-\subsection*{Special}
-\begin{yakutable}
-  \hline \yaku{\textbf{Chiitoi}}{七対子}{Seven unique pairs}{2}{$-$}{}\\
-  \hline \yaku{Nagashi Mangan}{流し満貫}{All discards are unclaimed and terminals/honours only}{M}{$-$}{Exhaustive draw}\\
-  \hline \yaku{Kokushi Musou}{国士無双}{Each terminal and honour plus duplicate}{Y}{$-$}{}\\
-  \hline
-\end{yakutable}
-
-\subsection*{Sets}
-\begin{yakutable}
-  \hline \yaku{\textbf{Toitoi}}{対々和}{Only sets}{2}{2}{}\\
-  \hline \yaku{Sanankou}{三暗刻}{Three concealed sets}{2}{2}{}\\
-  \hline \yaku{Sanshoku Doukou}{三色同刻}{Same set in each suit}{2}{2}{}\\
-  \hline \yaku{Sankantsu}{三槓子}{Three kans}{2}{2}{}\\
-  \hline \yaku{Suuankou}{四暗刻}{Four concealed sets}{Y}{$-$}{}\\
-  \hline \yaku{Suukantsu}{四槓子}{Four kans}{Y}{Y}{}\\
-  \hline
-\end{yakutable}
-
-\subsection*{Terminals}
-\begin{yakutable}
-  \hline \yaku{\textbf{Tanyao}}{断幺九}{No terminals or honours}{1}{1}{}\\
-  \hline \yaku{Chanta}{混全帯么九}{A terminal/honour in each group/pair}{2}{1}{}\\
-  \hline \yaku{Junchan}{純全帯么九}{A terminal in each group/pair, no honours}{3}{2}{}\\
-  \hline \yaku{Chinroutou}{清老頭}{Only terminals}{Y}{Y}{}\\
-  \hline
-\end{yakutable}
-
-\subsection*{Honours}
-\begin{yakutable}
-  \hline \yaku{\textbf{Yakuhai}}{役牌}{Set of dragons or round/seat winds}{1}{1}{Each set is counted}\\
-  \hline \yaku{Honroutou}{混老頭}{Only terminals and honours}{2}{2}{}\\
-  \hline \yaku{Shousangen}{小三元}{Two sets and a pair of dragons}{2}{2}{Sets count for yakuhai also}\\
-  \hline \yaku{Daisangen}{大三元}{Three sets of dragons}{Y}{Y}{}\\
-  \hline \yaku{Shousuushi}{小四喜}{Three sets and a pair of winds}{Y}{Y}{}\\
-  \hline \yaku{Daisuushi}{大四喜}{Four sets of winds}{Y}{Y}{}\\
-  \hline \yaku{Tsuuiisou}{字一色}{Only honours}{Y}{Y}{}\\
-  \hline
-\end{yakutable}
+\input{./includes/yaku-situational.tex}
+\input{./includes/yaku-sequences.tex}
+\input{./includes/yaku-suits.tex}
+\input{./includes/yaku-special.tex}
+\input{./includes/yaku-sets.tex}
+\input{./includes/yaku-terminals.tex}
+\input{./includes/yaku-honours.tex}
 \end{multicols}
 \end{centering}
 

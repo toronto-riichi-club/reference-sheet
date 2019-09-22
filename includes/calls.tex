@@ -1,0 +1,25 @@
+{\setlength{\extrarowheight}{1ex}%
+  \begin{tabularx}{\linewidth}{|>{\Large\raggedleft\arraybackslash}X|>{\centering\arraybackslash}X|X|}
+    \hline
+    \textbf{\normalsize Group} & \textbf{Call} & \textbf{From}\\
+    \hline
+    \tile[angle=90]{man1}\tile{man2}\tile{man3}            & ``chii''  & Left\\
+    \hline
+    \tile{hatsu}\tile{hatsu}\tile[angle=90]{hatsu}         & ``pon''   & Other\\
+    \hline
+    \tile{pin8}\tile[angle=90]{pin8}\tile{pin8}\tile{pin8} & ``kan''   & Other\\
+    \hline
+    \tile{back}\tile{sou1}\tile{sou1}\tile{back}           & ``kan''   & Self\\
+    \hline
+    \tile{shaa}%
+    \pbox[b]{\textwidth}{\vspace{0.25ex}\tile[angle=90]{shaa}\\*[-0.5em]\tile[angle=90]{shaa}}%
+    \tile{shaa}                                            & ``kan''   & Self\\
+    \hline
+    {\normalsize Win}                                      & ``ron''   & Other\\
+    \hline
+    {\normalsize Win}                                      & ``tsumo'' & Other\\
+    \hline\hline
+    \multicolumn{3}{|l|}{Lower calls take precedence when simultaneous.}\\
+    \hline
+  \end{tabularx}
+}
