@@ -1,8 +1,12 @@
+\ifdefined\thetitle%
+\else\def\thetitle{Riichi Reference Sheet}%
+\fi
+
 \usepackage[margin=1cm,includefoot,footskip=1.5em]{geometry}
 \usepackage{fancyhdr}
 \usepackage[
   hidelinks,
-  pdftitle={Riichi Reference Sheet},
+  pdftitle={\thetitle},
   pdfauthor={Toronto Riichi Club},
 ]{hyperref}
 \usepackage{xeCJK}
