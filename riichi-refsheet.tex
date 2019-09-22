@@ -1,6 +1,6 @@
 \documentclass{article}
 
-\usepackage[margin=1cm,includefoot]{geometry}
+\usepackage[margin=1cm,includefoot,footskip=1.5em]{geometry}
 \usepackage{fancyhdr}
 \usepackage[
   hidelinks,
@@ -30,6 +30,9 @@
 
 \newcommand\scorepair[2]{\hfill{}#1 $/$\hfill{}#2}
 \newcommand\yaku[6]{\textsc{\large{}#1} / #2\hfill#6\newline{}#3&#4&#5}
+\newenvironment{callprocedure}%
+  {\begin{enumerate}[leftmargin=2pt,itemindent=1pt,itemsep=0pt,labelsep=1ex,topsep=0pt]}%
+  {\end{enumerate}}
 
 \newcolumntype{S}{@{}>{\centering\arraybackslash}X@{\,\,}}
 \newcolumntype{Y}{>{\large\centering\arraybackslash}m{1.5ex}}
@@ -52,8 +55,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
-\begin{center}\Huge Riichi Reference Sheet\end{center}
-\vspace{0.5ex}
+\begin{center}\huge Riichi Reference Sheet\end{center}
 
 \begin{center}\huge
 % pinzu
@@ -166,6 +168,48 @@ $\hookrightarrow$
   \multicolumn{5}{|l|}{Fu count does not contribute to scores worth mangan or higher.}\\
   \hline
 \end{tabularx}
+
+\medskip
+
+{\footnotesize%
+  \begin{tabularx}{\linewidth}{XXXXX}
+    {\large\bfseries Pon/Chii} & {\large\bfseries Kan} & {\large\bfseries Riichi} & {\large\bfseries Ron} & {\large\bfseries Tsumo}\\
+    % Pon/chii
+    \begin{callprocedure}
+      \item Announce call
+      \item Reveal tiles
+      \item Discard
+      \item Arrange hand
+    \end{callprocedure} &
+    % Kan
+    \begin{callprocedure}
+      \item Announce call
+      \item Arrange tiles
+      \item Reveal kandora
+      \item Draw from dead wall
+      \item Discard/\linebreak[0]tsumo/\linebreak[0]kan
+    \end{callprocedure} &
+    % Riichi
+    \begin{callprocedure}
+      \item Announce riichi
+      \item Discard sideways
+      \item Place 1000-point bet in the middle
+    \end{callprocedure} &
+    % Ron
+    \begin{callprocedure}
+      \item Announce ron
+      \item Reveal hand
+      \item Do not pick up tile
+    \end{callprocedure} &
+    % Tsumo
+    \begin{callprocedure}
+    \item Keep draw separate
+    \item Announce tsumo
+    \item Reveal hand
+    \end{callprocedure}
+
+  \end{tabularx}
+}
 \end{minipage}\hfill
 \begin{minipage}[t]{0.4\linewidth}\vspace{0pt}
 % Calls table
