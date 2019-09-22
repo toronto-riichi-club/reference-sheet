@@ -297,13 +297,13 @@ $\hookrightarrow$
 \subsection*{Situational}
 \begin{yakutable}
   \hline \yaku{\textbf{Riichi}}{立直}{Declare riichi}{1}{$-$}{}\\
-  \hline \yaku{Ippatsu}{一発}{Win within 1 turn of riichi}{1}{$-$}{Uninterrupted}\\
-  \hline \yaku{Double Riichi}{ダブル立直}{First-turn riichi}{1}{$-$}{}\\
+  \hline \yaku{Ippatsu}{一発}{Win within 1 turn of riichi}{1}{$-$}{Uninterrupted, Add to riichi}\\
+  \hline \yaku{Double Riichi}{ダブル立直}{First-turn riichi}{1}{$-$}{Add to riichi}\\
   \hline \yaku{\textbf{Menzen Tsumo}}{門前清自摸和}{Closed-hand tsumo}{1}{$-$}{}\\
-  \hline \yaku{Haitei Raoyue}{海底撈月}{Last tile tsumo}{1}{1}{}\\
-  \hline \yaku{Houtei Raoyui}{河底撈魚}{Last tile ron}{1}{1}{}\\
+  \hline \yaku{Haitei Raoyue}{海底撈月}{Tsumo on last draw from live wall}{1}{1}{}\\
+  \hline \yaku{Houtei Raoyui}{河底撈魚}{Ron on last discard}{1}{1}{}\\
   \hline \yaku{Rinshan Kaihou}{嶺上開花}{Tsumo after a kan}{1}{1}{}\\
-  \hline \yaku{Chankan}{搶槓}{Ron off tile added to a kan}{1}{1}{}\\
+  \hline \yaku{Chankan}{搶槓}{Ron on tile added to a kan}{1}{1}{}\\
   \hline \yaku{Renhou}{人和}{Ron before first turn}{M}{$-$}{Uninterrupted}\\
   \hline \yaku{Tenhou}{天和}{Dealer first turn tsumo}{Y}{$-$}{}\\
   \hline \yaku{Chiihou}{地和}{Non-dealer first turn tsumo}{Y}{$-$}{Uninterrupted}\\
@@ -313,10 +313,10 @@ $\hookrightarrow$
 \subsection*{Sequences}
 \begin{yakutable}
   \hline \yaku{\textbf{Pinfu}}{平和}{Only sequences, 2-sided wait, pair is not yakuhai tiles}{1}{$-$}{}\\
-  \hline \yaku{Iipeikou}{一盃口}{Same sequence twice}{1}{$-$}{}\\
+  \hline \yaku{Iipeikou}{一盃口}{Two identical sequences}{1}{$-$}{}\\
   \hline \yaku{\textbf{Sanshoku}}{三色同順}{Same sequence in each suit}{2}{1}{}\\
   \hline \yaku{Ittsu}{一気通貫}{Sequences 123, 456, 789 in one suit}{2}{1}{}\\
-  \hline \yaku{Ryanpeikou}{二盃口}{Two sequences twice each}{3}{$-$}{}\\
+  \hline \yaku{Ryanpeikou}{二盃口}{Two pairs of identical sequences}{3}{$-$}{}\\
   \hline
 \end{yakutable}
 
@@ -324,16 +324,16 @@ $\hookrightarrow$
 \begin{yakutable}
   \hline \yaku{\textbf{Honitsu}}{混一色}{Single suit with honours}{3}{2}{}\\
   \hline \yaku{Chinitsu}{清一色}{Single suit, no honours}{6}{5}{}\\
-  \hline \yaku{Chuuren Poutou}{九連宝燈}{1112345678999X, single suit}{Y}{$-$}{}\\
-  \hline \yaku{Ryuuiisou}{緑一色}{Only hatsu or 2, 3, 4, 6, 8 sou}{Y}{Y}{}\\
+  \hline \yaku{Chuuren Poutou}{九連宝燈}{1112345678999 plus duplicate, single suit}{Y}{$-$}{}\\
+  \hline \yaku{Ryuuiisou}{緑一色}{Only green tiles (2/3/4/6/8 sou or hatsu)}{Y}{Y}{}\\
   \hline
 \end{yakutable}
 
 \subsection*{Special}
 \begin{yakutable}
-  \hline \yaku{\textbf{Chiitoi}}{七対子}{Seven pairs}{2}{$-$}{}\\
-  \hline \yaku{Nagashi Mangan}{流し満貫}{Terminal/honour discards only}{M}{$-$}{Discards intact}\\
-  \hline \yaku{Kokushi Musou}{国士無双}{Each terminal and honour}{Y}{$-$}{}\\
+  \hline \yaku{\textbf{Chiitoi}}{七対子}{Seven unique pairs}{2}{$-$}{}\\
+  \hline \yaku{Nagashi Mangan}{流し満貫}{All discards are unclaimed and terminals/honours only}{M}{$-$}{Exhaustive draw}\\
+  \hline \yaku{Kokushi Musou}{国士無双}{Each terminal and honour plus duplicate}{Y}{$-$}{}\\
   \hline
 \end{yakutable}
 
@@ -352,16 +352,16 @@ $\hookrightarrow$
 \begin{yakutable}
   \hline \yaku{\textbf{Tanyao}}{断幺九}{No terminals or honours}{1}{1}{}\\
   \hline \yaku{Chanta}{混全帯么九}{A terminal/honour in each group/pair}{2}{1}{}\\
-  \hline \yaku{Junchan}{純全帯么九}{A terminal in each group/pair}{3}{2}{}\\
+  \hline \yaku{Junchan}{純全帯么九}{A terminal in each group/pair, no honours}{3}{2}{}\\
   \hline \yaku{Chinroutou}{清老頭}{Only terminals}{Y}{Y}{}\\
   \hline
 \end{yakutable}
 
 \subsection*{Honours}
 \begin{yakutable}
-  \hline \yaku{\textbf{Yakuhai}}{役牌}{Set of dragons or round or seat winds}{1}{1}{}\\
+  \hline \yaku{\textbf{Yakuhai}}{役牌}{Set of dragons or round/seat winds}{1}{1}{Each set is counted}\\
   \hline \yaku{Honroutou}{混老頭}{Only terminals and honours}{2}{2}{}\\
-  \hline \yaku{Shousangen}{小三元}{Two sets and a pair of dragons}{2}{2}{}\\
+  \hline \yaku{Shousangen}{小三元}{Two sets and a pair of dragons}{2}{2}{Sets count for yakuhai also}\\
   \hline \yaku{Daisangen}{大三元}{Three sets of dragons}{Y}{Y}{}\\
   \hline \yaku{Shousuushi}{小四喜}{Three sets and a pair of winds}{Y}{Y}{}\\
   \hline \yaku{Daisuushi}{大四喜}{Four sets of winds}{Y}{Y}{}\\
