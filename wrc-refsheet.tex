@@ -1,0 +1,74 @@
+\documentclass{article}
+
+\def\thetitle{Riichi Reference Sheet (WRC)}
+
+\input{./includes/preamble.tex}
+
+\def\sentenboucount{9}
+\kiriagemangantrue
+\kazoeyakumanfalse
+\nagashimanganfalse
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\input{./includes/title.tex}
+
+\input{./includes/tiles.tex}
+
+\medskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.58\linewidth}\vspace{0pt}
+
+% Score table
+\input{./includes/scores.tex}
+
+\medskip
+
+% Score table (limit)
+\input{./includes/scores-limit.tex}
+
+\medskip
+
+% Call procedures
+{\footnotesize%
+  \input{./includes/call-procedures.tex}
+}
+\end{minipage}\hfill
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{minipage}[t]{0.4\linewidth}\vspace{0pt}
+% Calls table
+\input{./includes/calls.tex}
+
+\medskip
+
+% Fu table
+\input{./includes/fu.tex}
+
+\bigskip
+
+% Tenbou
+\input{./includes/tenbou.tex}
+\end{minipage}
+
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{centering}
+%\section*{\textsc{Yaku}}
+
+\input{./includes/yaku-legend.tex}
+
+% Yaku
+\begin{multicols}{2}
+\input{./includes/yaku-situational.tex}
+\input{./includes/yaku-sequences.tex}
+\input{./includes/yaku-suits.tex}
+\input{./includes/yaku-special.tex}
+\input{./includes/yaku-sets.tex}
+\input{./includes/yaku-terminals.tex}
+\input{./includes/yaku-honours.tex}
+\end{multicols}
+\end{centering}
+
+\end{document}
