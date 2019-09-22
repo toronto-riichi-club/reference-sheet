@@ -17,9 +17,8 @@
 
 \setCJKmainfont{HanaMinA}
 
-\newcommand\tile[2][]{\raisebox{-0.25ex}{\begin{overpic}[width=1em,#1]{tiles/front.pdf}\centering\includegraphics[width=1em,#1]{tiles/#2.pdf}\end{overpic}}}
-\newcommand\Hugetile[2][]{{\Huge\tile[#1]{#2}}}
-\newcommand\describetile[3]{\pbox{1.5em}{\Hugetile{#1}\normalsize\\\textbf{#2}\\\textit{#3}}}
+\newcommand\tile[2][]{\raisebox{-0.5ex}{\begin{overpic}[height=1em,#1]{tiles/front.pdf}\centering\includegraphics[height=1em,#1]{tiles/#2.pdf}\end{overpic}}}
+\newcommand\describetile[3]{\pbox{1.5em}{\tile[height=1.5em]{#1}\normalsize\\\textbf{#2}\\\textit{#3}}}
 
 \newcommand\scorepair[2]{\hfill{}#1 $/$\hfill{}#2}
 \newcommand\yaku[6]{\textsc{\large{}#1} / #2\hfill#6\newline{}#3&#4&#5}
@@ -153,10 +152,10 @@ $\hookrightarrow$
 \end{minipage}\hfill
 \begin{minipage}[t]{0.4\linewidth}\vspace{0pt}
 % Calls table
-{\setlength{\extrarowheight}{2.25ex}%
-  \begin{tabularx}{\linewidth}{|X|X|X|}
+{\setlength{\extrarowheight}{1ex}%
+  \begin{tabularx}{\linewidth}{|>{\Large\raggedleft\arraybackslash}X|>{\centering\arraybackslash}X|X|}
     \hline
-    \textbf{Group} & \textbf{Call} & \textbf{From}\\
+    \textbf{\normalsize Group} & \textbf{Call} & \textbf{From}\\
     \hline
     \tile[angle=90]{man1}\tile{man2}\tile{man3}            & ``chii''  & Left\\
     \hline
@@ -167,12 +166,12 @@ $\hookrightarrow$
     \tile{back}\tile{sou1}\tile{sou1}\tile{back}           & ``kan''   & Self\\
     \hline
     \tile{shaa}%
-    \pbox[b]{\textwidth}{\tile[angle=90]{shaa}\\*[-0.5ex]\tile[angle=90]{shaa}}%
+    \pbox[b]{\textwidth}{\vspace{0.25ex}\tile[angle=90]{shaa}\\*[-0.5em]\tile[angle=90]{shaa}}%
     \tile{shaa}                                            & ``kan''   & Self\\
     \hline
-    Win                                                    & ``ron''   & Other\\
+    {\normalsize Win}                                      & ``ron''   & Other\\
     \hline
-    Win                                                    & ``tsumo'' & Other\\
+    {\normalsize Win}                                      & ``tsumo'' & Other\\
     \hline\hline
     \multicolumn{3}{|l|}{Lower calls take precedence when simultaneous.}\\
     \hline
