@@ -1,7 +1,8 @@
 \begin{tabularx}{\linewidth}{|S|S|S|S|S|}
   \hline
-  \textbf{\large{}5} & \textbf{\large{}6-7} & \textbf{\large{}8-10} & \textbf{\large{}11-12} & \textbf{\large{}13+}\\
-  mangan & haneman & baiman & sanbaiman & yakuman\\
+  \textbf{\large{}5} & \textbf{\large{}6-7} & \textbf{\large{}8-10} & \textbf{\large{}\ifkazoeyakuman 11-12\else 11+\fi} &
+  \ifkazoeyakuman\textbf{\large{}13+}\else\multirow{2}{*}{\textsc{yakuman}}\fi\\
+  mangan & haneman & baiman & sanbaiman & \ifkazoeyakuman yakuman\else\fi\\
   \hdashline
   \scorepair{non}{dealer} & \scorepair{non}{dealer} & \scorepair{non}{dealer} & \scorepair{non}{dealer} & \scorepair{non}{dealer}\\
   \hline\hline
