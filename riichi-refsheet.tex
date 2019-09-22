@@ -1,10 +1,11 @@
 \documentclass{article}
 
-\usepackage[margin=1cm]{geometry}
-\usepackage{nopageno}
+\usepackage[margin=1cm,includefoot]{geometry}
+\usepackage{fancyhdr}
 \usepackage{xeCJK}
 \usepackage{libertine}
 \usepackage{microtype}
+\usepackage[type={CC},modifier={by-sa},version={4.0}]{doclicense}
 \usepackage{tabularx}
 \usepackage{booktabs}
 \usepackage{arydshln}
@@ -32,6 +33,15 @@
 \renewcommand{\arraystretch}{1.1}
 \setlength{\parindent}{0pt}
 \setlength\extrarowheight{0.25ex}
+
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{1pt}
+\cfoot{%
+  © 2019 Toronto Riichi Club. \doclicenseIcon \doclicenseText \\
+  Based on the reference sheet by Alexis ``alercah'' Hunt (CC BY-SA 4.0).
+  Tile images by FluffyStuff (CC BY 4.0).
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
