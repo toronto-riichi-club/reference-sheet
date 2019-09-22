@@ -41,6 +41,57 @@ xelatex wrc-refsheet
 
 Using either command will produce PDF files called `riichi-refsheet.pdf` and `wrc-refsheet.pdf`.
 
+## Customization
+
+Certain portions of the sheet can be customized to better fit certain rulesets.
+See the preamble of the [WRC sheet][] for an example on usage.
+
+[WRC sheet]: ./wrc-refsheet.tex
+
+### Title
+
+You can customize the title by defining the `\thetitle` macro _before_ including `preamble.tex`.
+The default title is "Riichi Reference Sheet".
+
+```tex
+\def\thetitle{Riichi Reference Sheet}
+```
+
+### Starting points
+
+You can customize the count beside the 1000-point sticks to match your ruleset's starting point value
+by defining the `\sentencount` macro _after_ including `preamble.tex`.
+
+The default number is `4` for 25000 points; set it to `9` to start at 30000 points.
+
+```tex
+\def\sentencount{4}
+```
+
+### Rule toggles
+
+There are a number of toggles available to turn on and off certain rules.
+These toggles are defined using [`\newif`][newif] in `includes/preamble.tex`.
+
+| Toggle | Default | Description |
+| ------ | ------- | ----------- |
+| `kazoeyakuman`  | `true`  | [Kazoe yakuman][] (counted yakuman): Hands worth 13+ han are scored as yakuman. |
+| `kiriagemangan` | `false` | [Kiriage mangan][] (rounded mangan): Hands worth 3 han 60 fu or 4 han 30 fu are rounded up to a mangan. |
+| `nagashimangan` | `true`  | [Nagashi mangan][] (discards mangan): Hands with terminal/honour discards after exhaustive draw are worth a mangan. |
+
+For example, to disable kazoe yakuman and enable kiriage mangan,
+add the following to the preamble _after_ including `preamble.tex`:
+
+```tex
+\kazoeyakumanfalse
+\kiriagemangantrue
+```
+
+[newif]: https://tex.stackexchange.com/a/5896
+[Kazoe yakuman]: http://arcturus.su/wiki/Kazoe_yakuman
+[Kiriage mangan]: http://arcturus.su/wiki/Scoring_table#Kiriage_mangan
+[Nagashi mangan]: http://arcturus.su/wiki/Nagashi_mangan
+
 * * *
 
 ## License
