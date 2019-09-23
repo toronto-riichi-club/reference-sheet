@@ -2,6 +2,15 @@
 \else\def\thetitle{Riichi Reference Sheet}%
 \fi
 
+\newif\ifkiriagemangan
+\newif\ifkazoeyakuman
+\newif\ifnagashimangan
+
+\def\sentenboucount{4}
+\kiriagemanganfalse
+\kazoeyakumantrue
+\nagashimangantrue
+
 \usepackage[margin=1cm,includefoot,footskip=1.5em]{geometry}
 \usepackage{fancyhdr}
 \usepackage[
@@ -24,15 +33,6 @@
 \usepackage{overpic}
 
 \setCJKmainfont{HanaMinA}
-
-\newif\ifkiriagemangan
-\newif\ifkazoeyakuman
-\newif\ifnagashimangan
-
-\def\sentenboucount{4}
-\kiriagemanganfalse
-\kazoeyakumantrue
-\nagashimangantrue
 
 \newcommand\tenbou[1]{\includegraphics[height=1em]{tenbou/tenbou-#1.pdf}}
 
