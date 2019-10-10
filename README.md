@@ -3,14 +3,14 @@
 Reference sheets for [Japanese mahjong][] written in XeTeX.
 These sheets are intended to be useful as a quick reference guide while playing.
 
-These sheets are optimized for the ruleset used by the [Toronto Riichi Club][TORI],
+These sheets are optimized for the [ruleset used by the Toronto Riichi Club][tori-rules],
 but it should be widely applicable to most rulesets with a few minor variations.
 A sheet based on the WRC ruleset is also available.
 
 **Download the latest PDF from the [releases page][releases].**
 
 [Japanese mahjong]: http://arcturus.su/wiki/Japanese_mahjong
-[TORI]: https://www.torontoriichi.club/
+[tor-rules]: https://www.torontoriichi.club/rules/
 [releases]: https://github.com/toronto-riichi-club/reference-sheet/releases
 
 * * *
