@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Github Action for LaTeX
+      uses: xu-cheng/latex-action@1.2.0
+      with:
+        root_file: riichi-refsheet.tex
+    - name: Github Action for LaTeX
+      uses: xu-cheng/latex-action@1.2.0
+      with:
+        root_file: wrc-refsheet.tex
+    - name: Copy artifacts for upload
+      run: |
+        mkdir -p dist
+        cp riichi-refsheet.pdf wrc-refsheet.pdf dist
+    - name: Upload artifact
+      uses: actions/upload-artifact@v1.0.0
+      with:
+        name: PDFs
+        path: dist
