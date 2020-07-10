@@ -10,7 +10,7 @@ A sheet based on the WRC ruleset is also available.
 **Download the latest PDF from the [releases page][releases].**
 
 [Japanese mahjong]: http://arcturus.su/wiki/Japanese_mahjong
-[tor-rules]: https://www.torontoriichi.club/rules/
+[tori-rules]: https://www.torontoriichi.club/rules/
 [releases]: https://github.com/toronto-riichi-club/reference-sheet/releases
 
 * * *
