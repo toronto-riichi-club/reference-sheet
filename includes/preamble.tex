@@ -33,13 +33,15 @@
 \usepackage{overpic}
 \usepackage{enumitem}
 \usepackage{ragged2e}
+\usepackage{rotating}
 
 \setCJKmainfont{HanaMinA}
 
 \newcommand\tenbou[1]{\includegraphics[height=1em]{tenbou/tenbou-#1.pdf}}
 
 \newcommand\tile[2][]{\raisebox{-0.5ex}{\begin{overpic}[height=1em,#1]{tiles/front.pdf}\centering\includegraphics[height=1em,#1]{tiles/#2.pdf}\end{overpic}}}
-\newcommand\describetile[3]{\pbox{1.5em}{\Centering\tile[height=1.5em]{#1}\small\\[0.25ex]\textbf{#2}\\[0.25ex]\textit{#3}}}
+%\newcommand\describetile[3]{\pbox{1.5em}{\Centering\tile[height=1.5em]{#1}\small\\[0.25ex]\textbf{#2}\\[0.25ex]\textit{#3}}}
+\newcommand\describetile[3]{\pbox{1.5em}{\Centering\tile[height=1.5em]{#1}\normalsize\\[0.25ex]\textbf{#2}\\\textit{#3}}}
 
 \newcommand\scorepair[2]{\hfill{}#1\ \,$/$\hfill{}#2}
 \newcommand\yaku[6]{\textsc{\large{}#1} / #2\hfill#6\newline{}#3&#4&#5}

@@ -1,20 +1,32 @@
-{\setlength{\extrarowheight}{1ex}%
-  \setlength\tabcolsep{4pt}%
-  \begin{tabularx}{\linewidth}{|>{\Large\raggedleft\arraybackslash}X>{\centering\arraybackslash}XX|}
+%{\setlength{\extrarowheight}{1ex}%
+%  \setlength\tabcolsep{4pt}%
+%  \begin{tabularx}{\linewidth}{|>{\Large\raggedleft\arraybackslash}X>{\centering\arraybackslash}XX|}
+%    \hline
+%    \textbf{\normalsize Group} & \textbf{Call} & \textbf{From}\\
+%    \hline
+%    \tile[angle=90]{man1}\tile{man2}\tile{man3}            & ``chii''  & Left\\
+%    \tile{hatsu}\tile{hatsu}\tile[angle=90]{hatsu}         & ``pon''   & Other\\
+%    \tile{pin8}\tile[angle=90]{pin8}\tile{pin8}\tile{pin8} & ``kan''   & Other\\
+%    \tile{back}\tile{sou1}\tile{sou1}\tile{back}           & ``kan''   & Self\\
+%    \tile{shaa}%
+%    \pbox[b]{\textwidth}{\vspace{0.25ex}\tile[angle=90]{shaa}\\*[-0.5em]\tile[angle=90]{shaa}}%
+%    \tile{shaa}                                            & ``kan''   & Self\\
+%    {\normalsize Win}                                      & ``ron''   & Other\\
+%    {\normalsize Win}                                      & ``tsumo'' & Self\\
+%    \hline
+%    \multicolumn{3}{|c|}{\pbox{0.9\linewidth}{\strut Lower calls take precedence when simultaneous. \strut}}\\
+%    \hline
+%  \end{tabularx}
+%}
+{%\setlength{\extrarowheight}{1ex}%
+  \setlength\tabcolsep{1em}%
+  \begin{tabularx}{\linewidth}{|rccccccc|X|}
     \hline
-    \textbf{\normalsize Group} & \textbf{Call} & \textbf{From}\\
+    \textbf{\normalsize Group} & {\Large\tile[angle=90]{man1}\tile{man2}\tile{man3}} & {\Large\tile{hatsu}\tile{hatsu}\tile[angle=90]{hatsu}} & {\Large\tile{pin8}\tile[angle=90]{pin8}\tile{pin8}\tile{pin8}} & {\Large\tile{back}\tile{sou1}\tile{sou1}\tile{back}} & {\Large\tile{shaa}\pbox[b]{\textwidth}{\vspace{0.25ex}\tile[angle=90]{shaa}\\*[-0.5em]\tile[angle=90]{shaa}}\tile{shaa}} & {\normalsize\bfseries Win} & {\normalsize\bfseries Win} & \multirow{3}{*}{\pbox{\linewidth}{\small Calls on the right take precedence when simultaneous}}\\
+    \textbf{Call}              &  ``chii''                                   & ``pon''                                        & ``kan''                                               & ``kan''                                      & ``kan''                                                                                                          & ``ron''                    & ``tsumo''                  & \\
+    \textbf{From}              & Left                                        & Other                                          & Other                                                  & Self                                         & Self                                                                                                             & Other                      & Self                       & \\
     \hline
-    \tile[angle=90]{man1}\tile{man2}\tile{man3}            & ``chii''  & Left\\
-    \tile{hatsu}\tile{hatsu}\tile[angle=90]{hatsu}         & ``pon''   & Other\\
-    \tile{pin8}\tile[angle=90]{pin8}\tile{pin8}\tile{pin8} & ``kan''   & Other\\
-    \tile{back}\tile{sou1}\tile{sou1}\tile{back}           & ``kan''   & Self\\
-    \tile{shaa}%
-    \pbox[b]{\textwidth}{\vspace{0.25ex}\tile[angle=90]{shaa}\\*[-0.5em]\tile[angle=90]{shaa}}%
-    \tile{shaa}                                            & ``kan''   & Self\\
-    {\normalsize Win}                                      & ``ron''   & Other\\
-    {\normalsize Win}                                      & ``tsumo'' & Self\\
-    \hline
-    \multicolumn{3}{|c|}{\pbox{0.9\linewidth}{\strut Lower calls take precedence when simultaneous. \strut}}\\
-    \hline
+    %\multicolumn{8}{|c|}{\pbox{0.9\linewidth}{\strut Lower calls take precedence when simultaneous. \strut}}\\
+    %\hline
   \end{tabularx}
 }
