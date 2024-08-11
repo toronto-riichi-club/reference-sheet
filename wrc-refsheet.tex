@@ -1,8 +1,12 @@
 \documentclass{article}
 
-\def\thetitle{Riichi Reference Sheet (WRC)}
+% Define for PDF title
+\def\thetitle{Riichi Reference Sheet (WRC Rules)}
 
 \input{./includes/preamble.tex}
+
+% Redefine for displayed title
+\def\thetitle{\pbox{5\linewidth}{Riichi Reference Sheet \\(WRC Rules)}}
 
 \def\sentenboucount{9}
 \kiriagemangantrue
@@ -12,13 +16,39 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
+\begin{minipage}[t]{0.90\linewidth}\vspace{0pt}
+  \raggedright
+  \input{./includes/tiles.tex}
+\end{minipage}%\hfill
+\begin{minipage}[t]{0.10\linewidth}\vspace{0pt}
+  \raggedleft
+\begin{turn}{-90}
 \input{./includes/title.tex}
+\end{turn}
+\end{minipage}
+\medskip
 
-\input{./includes/tiles.tex}
+%\begin{minipage}[t]{0.77\linewidth}\vspace{0pt}
+
+%\end{minipage}\hfill
+%\begin{minipage}[t]{0.23\linewidth}\vspace{0pt}
+  {\normalsize
+  \setlength\tabcolsep{1pt}
+    % Calls table
+    \input{./includes/calls.tex}
+  }
+%\end{minipage}
 
 \medskip
+
+% Call procedures
+\pbox{\linewidth}{\footnotesize%
+  \input{./includes/call-procedures.tex}
+}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\vfill
 \begin{minipage}[t]{0.6\linewidth}\vspace{0pt}
 
 % Score table
@@ -31,17 +61,9 @@
 
 \medskip
 
-% Call procedures
-{\footnotesize%
-  \input{./includes/call-procedures.tex}
-}
 \end{minipage}\hfill
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{minipage}[t]{0.38\linewidth}\vspace{0pt}
-% Calls table
-\input{./includes/calls.tex}
-
-\medskip
 
 % Fu table
 \input{./includes/fu.tex}
@@ -50,6 +72,9 @@
 
 % Tenbou
 \input{./includes/tenbou.tex}
+
+\medskip
+
 \end{minipage}
 
 \pagebreak
