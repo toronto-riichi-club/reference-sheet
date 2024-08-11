@@ -1,3 +1,7 @@
+\ifdefined\theversion%
+\else\def\theversion{v2.0.0}
+\fi
+
 \ifdefined\thetitle%
 \else\def\thetitle{Riichi Reference Sheet}%
 \fi
@@ -5,11 +9,13 @@
 \newif\ifkiriagemangan
 \newif\ifkazoeyakuman
 \newif\ifnagashimangan
+\newif\ifdoublewind
 
 \def\sentenboucount{4}
 \kiriagemanganfalse
 \kazoeyakumantrue
 \nagashimangantrue
+\doublewindtrue
 
 \usepackage[margin=1cm,includefoot,footskip=1.5em]{geometry}
 \usepackage{fancyhdr}
@@ -19,7 +25,7 @@
   pdfauthor={Toronto Riichi Club},
 ]{hyperref}
 \usepackage{xeCJK}
-\usepackage{libertine}
+\usepackage{libertinus}
 \usepackage{microtype}
 \usepackage[type={CC},modifier={by-sa},version={4.0}]{doclicense}
 \usepackage{tabularx}
@@ -33,12 +39,14 @@
 \usepackage{overpic}
 \usepackage{enumitem}
 \usepackage{ragged2e}
+\usepackage{rotating}
 
 \setCJKmainfont{HanaMinA}
 
 \newcommand\tenbou[1]{\includegraphics[height=1em]{tenbou/tenbou-#1.pdf}}
 
 \newcommand\tile[2][]{\raisebox{-0.5ex}{\begin{overpic}[height=1em,#1]{tiles/front.pdf}\centering\includegraphics[height=1em,#1]{tiles/#2.pdf}\end{overpic}}}
+%\newcommand\describetile[3]{\pbox{1.5em}{\Centering\tile[height=1.5em]{#1}\small\\[0.25ex]\textbf{#2}\\[0.25ex]\textit{#3}}}
 \newcommand\describetile[3]{\pbox{1.5em}{\Centering\tile[height=1.5em]{#1}\normalsize\\[0.25ex]\textbf{#2}\\\textit{#3}}}
 
 \newcommand\scorepair[2]{\hfill{}#1\ \,$/$\hfill{}#2}
@@ -53,6 +61,9 @@
   {\tabularx{\columnwidth}{|X|Y:Y|}}%
   {\endtabularx}
 
+\setlength{\aboverulesep}{0.1ex}
+\setlength{\belowrulesep}{0.1ex}
+
 \renewcommand{\arraystretch}{1.1}
 \setlength{\parindent}{0pt}
 \setlength\extrarowheight{0.25ex}
@@ -61,8 +72,9 @@
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{1pt}
 \cfoot{%
-  © 2019 Toronto Riichi Club. \doclicenseIcon \doclicenseText
+  © 2019--2024 Toronto Riichi Club. \doclicenseIcon \doclicenseText
   Source code: {\footnotesize\url{https://git.io/toriref}}\\
+  \theversion.
   Based on the reference sheet by Alexis ``alercah'' Hunt (CC BY-SA 4.0).
   Tile images by FluffyStuff (CC BY 4.0).
 }
