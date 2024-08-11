@@ -21,7 +21,7 @@ Simply to use them, you can get a PDF copy from the releases page as outlined ab
 ## Prerequisites
 
 * [XeTeX](https://ctan.org/pkg/xetex) with CJK libs (available in TeX distributions such as [TeX Live](https://www.tug.org/texlive/))
-* [Linux Libertine](http://libertine-fonts.org/) (font)
+* [Libertinus Serif](https://github.com/alerque/libertinus) (font)
 * [Hanazono Mincho](https://www.freejapanesefont.com/hanazono-mincho-%E8%8A%B1%E5%9C%92%E6%98%8E%E6%9C%9D/) (CJK font)
 
 ## Building
