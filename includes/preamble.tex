@@ -1,3 +1,7 @@
+\ifdefined\theversion%
+\else\def\theversion{v2.0.0}
+\fi
+
 \ifdefined\thetitle%
 \else\def\thetitle{Riichi Reference Sheet}%
 \fi
@@ -70,6 +74,7 @@
 \cfoot{%
   © 2019 Toronto Riichi Club. \doclicenseIcon \doclicenseText
   Source code: {\footnotesize\url{https://git.io/toriref}}\\
+  \theversion.
   Based on the reference sheet by Alexis ``alercah'' Hunt (CC BY-SA 4.0).
   Tile images by FluffyStuff (CC BY 4.0).
 }
