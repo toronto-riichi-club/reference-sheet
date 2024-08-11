@@ -75,6 +75,7 @@ These toggles are defined using [`\newif`][newif] in `includes/preamble.tex`.
 
 | Toggle | Default | Description |
 | ------ | ------- | ----------- |
+| `doublewind`    | `true`  | [Double wind fu][]: A wind pair that is both the seat and round wind counts as 4 fu (as opposed to just 2 fu). |
 | `kazoeyakuman`  | `true`  | [Kazoe yakuman][] (counted yakuman): Hands worth 13+ han are scored as yakuman. |
 | `kiriagemangan` | `false` | [Kiriage mangan][] (rounded mangan): Hands worth 3 han 60 fu or 4 han 30 fu are rounded up to a mangan. |
 | `nagashimangan` | `true`  | [Nagashi mangan][] (discards mangan): Hands with terminal/honour discards after exhaustive draw are worth a mangan. |
@@ -88,6 +89,7 @@ add the following to the preamble _after_ including `preamble.tex`:
 ```
 
 [newif]: https://tex.stackexchange.com/a/5896
+[Double wind fu]: https://riichi.wiki/Scoring_variations#Double_wind_fu
 [Kazoe yakuman]: http://arcturus.su/wiki/Kazoe_yakuman
 [Kiriage mangan]: http://arcturus.su/wiki/Scoring_table#Kiriage_mangan
 [Nagashi mangan]: http://arcturus.su/wiki/Nagashi_mangan
