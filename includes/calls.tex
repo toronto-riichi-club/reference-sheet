@@ -18,15 +18,19 @@
 %    \hline
 %  \end{tabularx}
 %}
-{%\setlength{\extrarowheight}{1ex}%
-  \setlength\tabcolsep{1.5ex}%
-  \begin{tabularx}{\linewidth}{|rccccccc|X|}
-    \hline
-    \textbf{\normalsize Group} & {\Large\tile[angle=90]{man1}\tile{man2}\tile{man3}} & {\Large\tile{hatsu}\tile{hatsu}\tile[angle=90]{hatsu}} & {\Large\tile{pin8}\tile[angle=90]{pin8}\tile{pin8}\tile{pin8}} & {\Large\tile{back}\tile{sou1}\tile{sou1}\tile{back}} & {\Large\tile{shaa}\pbox[b]{\textwidth}{\vspace{0.25ex}\tile[angle=90]{shaa}\\*[-0.5em]\tile[angle=90]{shaa}}\tile{shaa}} & {\normalsize\bfseries Win} & {\normalsize\bfseries Win} & \multirow{3}{*}{\pbox{\linewidth}{\small Calls on the right take precedence when simultaneous}}\\
-    \textbf{Call}              &  ``chii''                                   & ``pon''                                        & ``kan''                                               & ``kan''                                      & ``kan''                                                                                                          & ``ron''                    & ``tsumo''                  & \\
-    \textbf{From}              & Left                                        & Other                                          & Other                                                  & Self                                         & Self                                                                                                             & Other                      & Self                       & \\
-    \hline
-    %\multicolumn{8}{|c|}{\pbox{0.9\linewidth}{\strut Lower calls take precedence when simultaneous. \strut}}\\
-    %\hline
-  \end{tabularx}
+{\setlength{\fboxsep}{0pt}%
+  \framebox[\linewidth]{%
+    \begin{minipage}[b]{0.80\linewidth}\vspace{0pt}
+      \setlength\tabcolsep{1.5ex}%
+      \begin{tabularx}{\linewidth}{rccccccc}
+        \textbf{\normalsize Group} & {\Large\tile[angle=90]{man1}\tile{man2}\tile{man3}} & {\Large\tile{hatsu}\tile{hatsu}\tile[angle=90]{hatsu}} & {\Large\tile{pin8}\tile[angle=90]{pin8}\tile{pin8}\tile{pin8}} & {\Large\tile{back}\tile{sou1}\tile{sou1}\tile{back}} & {\Large\tile{shaa}\pbox[b]{\textwidth}{\vspace{0.25ex}\tile[angle=90]{shaa}\\*[-0.5em]\tile[angle=90]{shaa}}\tile{shaa}} & {\normalsize\bfseries Win} & {\normalsize\bfseries Win} \\
+        \textbf{Call}              &  ``chii''                                   & ``pon''                                        & ``kan''                                               & ``kan''                                      & ``kan''                                                                                                          & ``ron''                    & ``tsumo''                  \\
+        \textbf{From}              & Left                                        & Other                                          & Other                                                  & Self                                         & Self                                                                                                             & Other                      & Self                       \\
+      \end{tabularx}
+    \end{minipage}
+    \vline\hspace{1ex}
+    \begin{minipage}[s]{0.17\linewidth}\vspace{0pt}
+      \small Calls on the right of the list take precedence when simultaneous.
+    \end{minipage}\hspace{1ex}
+  }
 }
